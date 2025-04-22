@@ -12,6 +12,13 @@ import {
 } from '@generationsoftware/pt-v5-autotasks-library';
 
 
+/**
+ * Asynchronously initializes and runs the prize claimer process.
+ * This function sets up the environment, configures the prize claimer,
+ * downloads necessary contract information, and executes the prize claiming process.
+ * @returns {Promise<void>} A promise that resolves when the prize claimer process completes
+ * @throws {Error} If there are issues with environment setup, configuration, or execution
+ */
 const main = async () =>{
   const envVars: PrizeClaimerEnvVars = loadPrizeClaimerEnvVars();
   const provider: BaseProvider = getProvider(envVars);
